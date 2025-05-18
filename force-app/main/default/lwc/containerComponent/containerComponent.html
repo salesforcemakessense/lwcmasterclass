@@ -1,0 +1,14 @@
+<template>
+    <template lwc:if={hasProduct}>
+        <template for:each={productList} for:item="product">
+            <div class="slds-m-around_medium" key={product.id}>
+                <c-child-component product-id={product.id} product-name={product.name} product-rating={product.rating}></c-child-component>
+            </div>
+        </template>
+    </template>
+
+    <template lwc:if={parentCalled}>
+        <br><h2>Show that parent called the method to show this! It has not been called by the child or the current component itself</h2>
+    </template>
+    
+</template>

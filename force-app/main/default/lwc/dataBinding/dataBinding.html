@@ -1,0 +1,20 @@
+<template>
+    <lightning-card class="slds-card" title="One Way Binding">
+        <p class="slds-p-around_small">Hello {userName}!<br> 
+        You are currently at {subscriberScore} as of {currentTime} <br>
+        Your total watch duration is {totalLessonsWatched} minutes</p>
+    </lightning-card>
+
+    <lightning-card class="slds-card " title="Two Way Binding">
+        <lightning-input class="slds-p-around_small" value={memberStatus} onchange={updateMemberStatus} type="text" label="Enter your current status here"></lightning-input>
+        <p class="slds-p-around_small">Value typed is: {memberStatus}</p>
+    </lightning-card>
+
+    <lightning-card class="slds-card " title="Getter & Setters">
+        <p class="slds-p-around_small">{minutesWatched}</p>
+
+        <lightning-input type="number" onchange={handleWatchChange}></lightning-input>
+            <p class="slds-p-around_small">After Setter is called: {minutesWatched}</p>
+    </lightning-card>
+
+</template>

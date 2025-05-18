@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent Component">
+        <template lwc:if={eventReceived}>
+            Received this value from child: 
+            {selectedProduct.id} - {selectedProduct.name}
+            {timestamp}
+            Product has been curated by: {selectedBy}
+        </template>
+        <c-child-event-trigger onsendproductselected={handleProductSelection}></c-child-event-trigger>
+    </lightning-card>
+</template>

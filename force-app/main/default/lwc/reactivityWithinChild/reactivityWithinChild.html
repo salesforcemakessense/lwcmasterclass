@@ -1,0 +1,13 @@
+<template>
+    {userAddress}<br>
+
+    <template for:each={personalDetails} for:item="detail">
+        <div key={detail.index}>
+            Personal Detail for: {detail.name}<br>
+            Your balance is: {detail.balance}<br>
+            <template for:each={detail.friends} for:item="friend">
+                <p key={friend.id}>{friend.id} - {friend.name}</p>
+            </template>
+        </div>
+    </template>
+</template>
