@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="LDS with Custom View">
+        <lightning-record-view-form
+        record-id={recordId}
+        object-api-name={objectApiName}>
+         <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_2-of-6">
+                <lightning-output-field field-name="CaseNumber"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_2-of-6">
+                <lightning-output-field field-name="Reason"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_2-of-6">
+                <lightning-output-field field-name="Type"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_2-of-6">
+                <lightning-output-field field-name="Status"></lightning-output-field>
+            </div>
+         </div>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>
