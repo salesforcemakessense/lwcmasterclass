@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Record Form with Custom Layout to Edit">
+        <!-- to be able to edit a record with custom fields/layout -->
+         <lightning-record-edit-form
+         record-id={recordId}
+         object-api-name={objectApiName}
+        onsuccess={handleFormSuccess}
+         >
+
+         <lightning-messages></lightning-messages>
+         <div class="slds-grid slds-wrap slds-p-around_small">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Origin"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Reason"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Status"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Subject"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Type"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_2-of-2">
+                <lightning-input-field field-name="SLAViolation__c" required></lightning-input-field>
+            </div>
+            
+            <lightning-button type="submit" class="slds-m-right_small" label="Save" variant="brand"></lightning-button>
+            <lightning-button type="reset" label="Reset" variant="outline"></lightning-button>
+            
+        </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
