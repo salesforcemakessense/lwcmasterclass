@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Create a Record with custom layout without Apex">
+        <lightning-record-edit-form
+            object-api-name="Case"
+        >
+
+        <lightning-messages></lightning-messages>
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_2-of-3">
+                <lightning-input-field field-name="Subject" required></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-input-field field-name="Reason"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-input-field field-name="Type"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-input-field field-name="Origin"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-input-field field-name="SLAViolation__c"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_3-of-3">
+                <lightning-input-field field-name="Description"></lightning-input-field>
+            </div>
+            <br>
+            <lightning-button type="submit" class="slds-m-left_small" label="Create" variant="brand"></lightning-button>
+            <lightning-button type="reset" class="slds-m-left_small" label="Reset"></lightning-button>
+
+        </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
