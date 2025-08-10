@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="My 5 Cases">
+        <template if:true={foundCases}>
+            <template for:each={caseList} for:item="caseRec">
+                <ul key={caseRec.Id}>
+                    <li>{caseRec.Subject}</li>
+                    <li>{caseRec.Origin}</li>
+                    <li>{caseRec.Description}</li>
+                </ul>
+            </template>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="My 5 Tasks">
+        <template if:true={foundTasks}>
+            <template for:each={taskList} for:item="task">
+                <ul key={task.Id}>
+                    <li>{task.Subject}</li>
+                    <li>{task.ActivityDate}</li>
+                    <li>{task.Description}</li>
+                </ul>
+            </template>
+        </template>
+    </lightning-card>
+</template>
