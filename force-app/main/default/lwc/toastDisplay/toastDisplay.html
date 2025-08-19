@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Create Account with a name">
+        <div class="slds-m-around_medium">
+            <lightning-input  type="text" value={accountName} onchange={handleNameChange} label="Account Name"></lightning-input>
+            <lightning-button label="Create" variant="brand" onclick={handleAccountCreation}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
